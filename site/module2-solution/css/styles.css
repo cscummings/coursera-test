@@ -1,37 +1,57 @@
-/********** Base styles **********/
-
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 30;
   padding: 0;
 }
 
-#box {
-
-  background-color: light grey;
-  padding: 10px;
-  border: 1px solid black;
-  width: 300px;
-  height: 50px;
-  margin-top: 50px;
-  overflow: auto;
-}
-#content {
- background-color: light grey; /* grey */
-}
-
-
-h1 {
+h1 {	
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;	
   margin-bottom: 15px;
 }
 
 p {
   border: 1px solid black;
-  margin-right: auto;
-  margin-left: auto;
-  font-family: Rockwell;
-  color: white;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 10px;
+  font-family: Helvetica;
+  font-size: 150%;
+  color: black;
 }
+
+#box {
+  background-color: grey;
+  border: 1px solid black;
+  height: auto;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.yellow { background-color: #f4eb99;}
+.red { background-color:#fc5050;}
+.pink { background-color:pink;}
+
+.sm-box {
+  border: 1px solid black;
+  height: auto;
+  width: 180px;
+  font-weight: bold;
+  font-size:175%;
+  text-align: center;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-left:10px;
+  position: absolute;
+   right:0px;
+	
+}
+
+#content {
+  background-color: grey; 
+}
+
 /* Simple Responsive Framework. */
 .row {
   width: 100%;
@@ -41,7 +61,7 @@ p {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
     border: 1px solid green;
-}
+  }
   .col-lg-1 {
     width: 8.33%;
   }
@@ -79,13 +99,11 @@ p {
     width: 100%;
   }
 }
-
 /********** Medium devices only **********/
-
 @media (min-width: 992px) and (max-width: 1199px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
-    border: 1px solid green;
+    border: 1px solid black;
   }
   .col-md-1 {
     width: 8.33%;
@@ -103,7 +121,7 @@ p {
     width: 41.66%;
   }
   .col-md-6 {
-   width: 50%;
+    width: 50%;
   }
   .col-md-7 {
     width: 58.33%;
@@ -111,7 +129,7 @@ p {
   .col-md-8 {
     width: 66.66%;
   }
-  .col-md-9 {
+  .col-md-9 { 
     width: 74.99%;
   }
   .col-md-10 {
@@ -124,3 +142,4 @@ p {
     width: 100%;
   }
 }
+
