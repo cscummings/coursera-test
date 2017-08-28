@@ -122,6 +122,22 @@ function buildAndShowHomeHTML (categories) {
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
       // ....
+       var finalHtml = "<section class='row'>";
+
+         var html = homeHtmelUrl;
+         var name = "" + randomCategory.name;
+         var short_name = randomCategory.short_name;
+         html =
+           insertProperty(html, "name", name);
+         html =
+           insertProperty(html,
+                          "short_name",
+                          short_name);
+         finalHtml += html;
+       }
+
+       finalHtml += "</section>";
+
        insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
