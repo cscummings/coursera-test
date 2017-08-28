@@ -124,7 +124,7 @@ function buildAndShowHomeHTML (categories) {
       // ....
        var finalHtml = "<section class='row'>";
 
-         var html = homeHtmelUrl;
+         var html = homeHtmlUrl;
          var name = "" + randomCategory.name;
          var short_name = randomCategory.short_name;
          html =
