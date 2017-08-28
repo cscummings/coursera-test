@@ -134,7 +134,6 @@ function buildAndShowHomeHTML (categories) {
                           "short_name",
                           short_name);
          finalHtml += html;
-       }
 
        finalHtml += "</section>";
 
