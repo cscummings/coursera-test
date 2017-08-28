@@ -137,7 +137,7 @@ function buildAndShowHomeHTML (categories) {
 
        finalHtml += "</section>";
 
-       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+       insertHtml("#main-content", finalHtml);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
