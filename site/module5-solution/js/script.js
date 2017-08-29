@@ -136,7 +136,7 @@ function buildAndShowHomeHTML (categories) {
          finalHtml += html;
 
        finalHtml += "</section>";
-
+       console.log("HTML " + finalHtml);
        insertHtml("#main-content", finalHtml);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
