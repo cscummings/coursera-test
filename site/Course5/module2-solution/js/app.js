@@ -47,7 +47,8 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
 
 function ShoppingListCheckOffService() {
 	var service = this;
-	service.toBuy = [{name: "10 cookies"}, {name:"1 Milk"}, {name:"3 candy Bars"}, {name: "12 Cinnamon Rolls"}];
+	service.toBuy = [{name: "cookies" , quantity: "10"}, {name:"Milk" , quantity: "1"}, {name:"chocolate" , quantity: "4"},
+		{name:"fruit" , quantity: "7"}, {name:"gummie bears" , quantity: "3"}, {name: "Cinnamon Rolls" , quantity: "12"}];
 	service.bought = [];
 
 	service.addBuyItem = function (itemString) {
