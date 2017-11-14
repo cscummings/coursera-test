@@ -1,7 +1,7 @@
 (function () {
 'use strict';
 
-angular.module('menuapp')
+angular.module('MenuApp')
 .config(RoutesConfig);
 
 RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
