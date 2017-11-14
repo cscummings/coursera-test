@@ -1,11 +1,9 @@
-<p></p>
-<div>
-
 <ol>
-  <li ng-repeat="item in mainList.items">
-  <h4>{{ item.short_name }} {{ item.name }} <button class="col-xs-ofsset-12"ng-click="mainList.onRemove({index: $index});">Don't want this one</button></h4>
+  <li ng-repeat="item in $ctrl.items">
+  <h4>{{ item.short_name }} {{ item.name }} <button class="col-xs-ofsset-12"ng-click="list.onRemove({index: $index});">Don't want this one</button></h4>
     <p>{{item.description}}</p>
     
   </li>
 </ol>
-</div>
+
+

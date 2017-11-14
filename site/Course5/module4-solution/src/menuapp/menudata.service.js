@@ -15,19 +15,11 @@ function MenuDataService($http, ApiBasePath) {
   service.getAllCategories = function() {
 	  var promise = $http({
 	        method: "GET",
-	        url: (ApiBasePath + "/categories.json"),
-	        /*params: {
-	            category: name
-	          }*/
+	        url: (ApiBasePath + "/categories.json")
 
-	      })
-	      .then(function (response) {
-	    	  console.log("in getAllCategories then function" + response);
-		    })
-		    .catch(function (error) {
-		      console.log(error);
-		    });
-	    return promise;
+	      });
+
+	  return promise;
   };
 
   service.getItemsForCategory = function(categoryShortName) {
@@ -35,18 +27,10 @@ function MenuDataService($http, ApiBasePath) {
 	        method: "GET",
 	        url: (ApiBasePath + "/menu_items.json"),
 	        params: {
-	            category: categoryShortName,
-	            where: name
+	            category: categoryShortName
 	          }
 
-	      })
-	      .then(function (response) {
-	    	  console.log("in getItemsForCategory then function " + respose.data);
-	    	  
-		    })
-		    .catch(function (error) {
-		      console.log(error);
-		    });
+	      });
 	    
 	    return promise;
   };

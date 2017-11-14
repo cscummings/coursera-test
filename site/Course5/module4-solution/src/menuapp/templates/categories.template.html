@@ -1,6 +1,10 @@
 <ul>
   <li ng-repeat="item in $ctrl.items">
-    {{ item.description }}
+	<b class="text-warning">{{item.id}}</b>
+    <a ui-sref="items({category: $ctrl.category.short_name})">{{item.name}}</a>
+    <p>
+     {{item.special_instructions}}
+    </p> 
   </li>
 </ul>
 
