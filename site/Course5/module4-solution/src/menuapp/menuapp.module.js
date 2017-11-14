@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	var menuapp = angular.module('MenuApp', ['ui.router','data'])
+	var MenuApp = angular.module('MenuApp', ['ui.router','data'])
 
 	})();
 
