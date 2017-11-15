@@ -25,7 +25,8 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'MenuItemsController as list',
     resolve: {
         items: ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
-/*            return MenuDataService.getItemsForCategory($stateParams.shortname);         */ 
+/*            return MenuDataService.getItemsForCategory($stateParams.shortname);         */
+        	/* comment to make eclipse stage a change since it is so buggy */
             return MenuDataService.getItemsForCategory();
        }]
       }
