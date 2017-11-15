@@ -19,12 +19,14 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     templateUrl: 'src/menuapp/templates/home.template.html'
   })
   .state('items', {
-    url: '/items/{shortname}',
+/*	    url: '/items/{shortname}',*/
+	url: '/items',
     templateUrl: 'src/menuapp/templates/main-item.template.html',
     controller: 'MenuItemsController as list',
     resolve: {
         items: ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
-          return MenuDataService.getItemsForCategory($stateParams.shortname);
+/*            return MenuDataService.getItemsForCategory($stateParams.shortname);         */ 
+            return MenuDataService.getItemsForCategory();
        }]
       }
   })

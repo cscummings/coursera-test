@@ -1,5 +1,16 @@
 <a ui-sref="home">Home</a> &lt; <span><a ui-sref="categories">Category &lt; </a></span> <span>Items
 </span>
 
-  <items  menu-item="menuItem"></items>
+<h2>{{list.name}}</h2>
+  <items Items="list.items"></items>
+  
+<p>  Embedded results </p>
+  <ol>
+  <li ng-repeat="item in list.items">
+  <h4>{{ item.short_name }} {{ item.name }} <button class="col-xs-ofsset-12"ng-click="list.onRemove({index: $index});">Don't want this one</button></h4>
+    <p>{{item.description}}</p>
+    
+  </li>
+</ol>
+  
 
