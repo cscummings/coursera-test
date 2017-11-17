@@ -1,9 +1,10 @@
 <ul>
-  <li ng-repeat="item in $ctrl.items">
-	<b class="text-warning">{{item.id}}</b>
-    <a ui-sref="items({category: $ctrl.category.short_name})">{{item.name}}</a>
+  <li ng-repeat="category in $ctrl.categories">
+	<b class="text-warning">{{category.id}}</b>
+<!--     <a ui-sref="categories.menuItems({catId: $ctrl.categories[$index].short_name})">{{category.name}}</a> -->
+    <a ui-sref="menuItems({catId: $ctrl.categories[$index].short_name})">{{category.name}}</a>
     <p>
-     {{item.special_instructions}}
+     {{category.special_instructions}}
     </p> 
   </li>
 </ul>
