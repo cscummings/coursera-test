@@ -47,7 +47,7 @@ function NarrowItDownController(MenuSearchService) {
   var list = this;
   list.errorMsg = "Nothing Found!";
   list.searchTerm = "";
-  var emptyList = true;
+  var emptyList = false;
   // List of found items
   list.found = [];
 
@@ -64,6 +64,7 @@ function NarrowItDownController(MenuSearchService) {
 	    list.found = MenuSearchService.getMatchedMenuItems(searchTerm);
 	    
 	    if (list.found.length == 0) {
+		list.emptyList = true;
 	    	return errorMsg;
 	    } else {
 	    	list.emptyList = false;
